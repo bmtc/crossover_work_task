@@ -72,3 +72,17 @@ Instructions: Use Config tab department names only
 3. Reclassify vendors to match Config tab departments
 
 ------------------------
+
+------------------------
+TIMESTAMP: 2026-03-05 19:10:00
+------------------------
+
+Instructions: Address Quality Checks
+
+Propose quality-check plan including:
+- Types of checks to perform
+- Number of spot checks recommended
+- Consistency checks to implement
+- Evidence with examples of corrections needed
+
+------------------------
