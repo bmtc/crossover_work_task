@@ -1,30 +1,62 @@
-======================== PROMPT 1 ========================
-TIMESTAMP: 2026-03-05 18:15:00
-PURPOSE: Initial Project Setup and Analysis Overview
+NOTE: This file tracks all Instructions prompts sent by the user.
+All prompts will be timestamped and delimited with "------------------------"
 
-PROMPT:
-Set up a new project for vendor spend strategy analysis. Initialize GitHub repository and prepare for automated vendor categorization analysis.
+------------------------
+TIMESTAMP: 2026-03-05 18:25:00
+------------------------
 
-Task: "Vendor Spend Strategy Memo Assessment"
-- Analyze vendor spend data (~400 vendors, 12-month history)
-- Classify each vendor: Department, Vendor Description, Strategic Recommendation (Terminate/Consolidate/Optimize)
-- Identify Top 3 cost-saving opportunities with financial impact
-- Document methodology and approach
-- Create executive memo for CEO/CFO
+Instructions: Clarify mutual input understanding
 
-Input File: input/input_file.xlsx (813 rows of vendor data)
-- Column A: Vendor Name
-- Column B: Department (to be filled)
-- Column C: Last 12 months Cost (USD)
-- Column D: 1-line Description (to be filled)
-- Column E: Suggestions (to be filled)
+1. In input_file for each tab summarize: it's purpose (10 words max), key columns present,
+   classify columns to input / need to fill in.
+2. Confirm whether the spend data is: total last-12-months per vendor, or monthly line items
+   that need aggregation
+3. Identify any missing required columns for Part 1 (Department, Description, Recommendation)
+   and propose the exact new column names to add.
 
-Key Constraints:
-- MUST use Claude Code CLI (not claude.ai)
-- All categorizations must be accurate and justified
-- Recommendations must be realistic and move the needle for $1B+ business
-- Complete quality checks with evidence
-- Deliver well-organized project with clear documentation
+Do not start other actions yet.
 
-Expected Output: output/output_file.xlsx with all vendor analyses complete
-======================== END PROMPT 1 ========================
+------------------------
+
+------------------------
+TIMESTAMP: 2026-03-05 18:30:00
+------------------------
+
+Instructions: Prepare output file with required columns
+
+1. Copy input_file.xlsx to output/output_file.xlsx
+2. Add column "Estimated Annual Savings (USD)" to Top 3 Opportunities tab
+
+------------------------
+
+------------------------
+TIMESTAMP: 2026-03-05 18:35:00
+------------------------
+
+Instructions: Create vendor analysis methodology
+
+Your role: Assistant for Vendor Analysis Assessment
+
+Objective: For every vendor in the list, set Department and Vendor Description (one line)
+
+Rules:
+* Do not invent specific facts. Use conservative inference from vendor name and common industry usage.
+* Descriptions must be one line and as specific as possible (e.g., "Cloud infrastructure hosting (IaaS)",
+  "Expense management software", "Recruiting/ATS platform"), not vague ("business services").
+* Keep department names consistent using a fixed set.
+
+Request: Analyse the vendor list, create assessment methodology, document variations of
+department names, post it here.
+
+------------------------
+
+------------------------
+TIMESTAMP: 2026-03-05 18:45:00
+------------------------
+
+Instructions: Execute methodology and document it
+
+1. Execute suggested methodology (apply to categorize all vendors)
+2. Document methodology to the readmy.md file
+
+------------------------
