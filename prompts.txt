@@ -86,3 +86,25 @@ Propose quality-check plan including:
 - Evidence with examples of corrections needed
 
 ------------------------
+
+------------------------
+TIMESTAMP: 2026-03-05 19:25:00
+------------------------
+
+Instructions: Strategic Recommendations - Execute
+
+Apply methodology for Terminate/Consolidate/Optimize:
+- Default to Optimize
+- Consolidate: only multiple vendors doing same function
+- Terminate: only clearly nonessential
+- Add column for red flags/comments on recommendations
+
+Rules:
+- Consolidate only when function clearly overlaps AND same department
+- Terminate only with strong evidence (defunct, failed project, zero usage)
+- Optimize: default for all others
+- Include short note explaining recommendation
+
+Execute on all 386 vendors.
+
+------------------------
