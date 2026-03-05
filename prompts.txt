@@ -1,0 +1,30 @@
+======================== PROMPT 1 ========================
+TIMESTAMP: 2026-03-05 18:15:00
+PURPOSE: Initial Project Setup and Analysis Overview
+
+PROMPT:
+Set up a new project for vendor spend strategy analysis. Initialize GitHub repository and prepare for automated vendor categorization analysis.
+
+Task: "Vendor Spend Strategy Memo Assessment"
+- Analyze vendor spend data (~400 vendors, 12-month history)
+- Classify each vendor: Department, Vendor Description, Strategic Recommendation (Terminate/Consolidate/Optimize)
+- Identify Top 3 cost-saving opportunities with financial impact
+- Document methodology and approach
+- Create executive memo for CEO/CFO
+
+Input File: input/input_file.xlsx (813 rows of vendor data)
+- Column A: Vendor Name
+- Column B: Department (to be filled)
+- Column C: Last 12 months Cost (USD)
+- Column D: 1-line Description (to be filled)
+- Column E: Suggestions (to be filled)
+
+Key Constraints:
+- MUST use Claude Code CLI (not claude.ai)
+- All categorizations must be accurate and justified
+- Recommendations must be realistic and move the needle for $1B+ business
+- Complete quality checks with evidence
+- Deliver well-organized project with clear documentation
+
+Expected Output: output/output_file.xlsx with all vendor analyses complete
+======================== END PROMPT 1 ========================
