@@ -13,7 +13,7 @@ EXECUTIVE SUMMARY
 ================================================================================
 
 We have completed a comprehensive vendor spend analysis covering 386 active vendors
-representing $8.8M in annual procurement spend. This review identified immediate
+representing $7.89M in annual procurement spend. This review identified immediate
 cost-saving opportunities totaling $444K (11.6% reduction in top 3 categories) with
 realistic implementation timelines of 45-60 days for quick wins. We recommend
 proceeding with phased implementation starting in Q1 2026.
@@ -24,7 +24,7 @@ FINDINGS
 
 SCOPE & QUALITY:
 • Total vendors analyzed: 386 (100% classified and validated)
-• Total annual spend: $8.8M
+• Total annual spend: $7.89M
 • Quality score: 95/100 (all data completeness and consistency checks passed)
 • Opportunities identified: 50 consolidation candidates; 155 termination candidates
 

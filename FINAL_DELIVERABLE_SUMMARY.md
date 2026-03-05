@@ -10,7 +10,7 @@
 | Metric | Value |
 |--------|-------|
 | **Total Vendors Analyzed** | 386 (100% classified) |
-| **Total Annual Spend** | $8,800,000 |
+| **Total Annual Spend** | $7,887,360 |
 | **Data Quality Score** | 95/100 |
 | **Completeness** | 100% (all columns populated) |
 | **Validation** | 6-phase quality checks, 20-vendor spot check |
