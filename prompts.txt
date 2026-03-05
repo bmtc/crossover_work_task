@@ -60,3 +60,15 @@ Instructions: Execute methodology and document it
 2. Document methodology to the readmy.md file
 
 ------------------------
+
+------------------------
+TIMESTAMP: 2026-03-05 19:00:00
+------------------------
+
+Instructions: Use Config tab department names only
+
+1. Check Config tab for ONLY valid department names
+2. Update methodology with correct department names
+3. Reclassify vendors to match Config tab departments
+
+------------------------

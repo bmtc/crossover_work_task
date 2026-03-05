@@ -57,20 +57,20 @@ Recommendations tab - 1-page executive memo:
 - **Spend Range**: $100K to $3.1M per vendor
 - **Data Format**: Single aggregated value per vendor (no disaggregation needed)
 
-### Department Classification (Fixed Set)
-Consistent 12-department taxonomy for all vendor assignments:
+### Department Classification (Fixed Set - Config Tab Source)
+Consistent 12-department taxonomy (from Config tab) for all vendor assignments:
 1. **Engineering** - Software development, technical infrastructure, product buildout
-2. **Product** - Product management, design, UX/UI
-3. **IT** - IT operations, infrastructure, security, networking
-4. **Security** - Information security, compliance, risk management
-5. **Sales** - CRM, deal management, revenue systems
-6. **Marketing** - Marketing automation, analytics, creative services
-7. **Support** - Customer support platforms, ticketing
-8. **People/HR** - Recruitment, ATS, payroll, talent management
-9. **Finance** - Accounting, audit, tax, FP&A, financial planning
-10. **Legal** - Legal services, contracts, counsel
-11. **G&A/Operations** - Real estate, facilities, office operations, insurance, travel/expense
-12. **Consulting** - Strategy consulting, M&A advisory, business consulting
+2. **Facilities** - Real estate, office space, coworking, physical workspace management
+3. **G&A** - General & Administrative: insurance, travel/expense, business services
+4. **Legal** - Legal services, counsel, contracts, law firms
+5. **M&A** - Mergers & Acquisitions advisory, investment consulting
+6. **Marketing** - Marketing automation, digital marketing, advertising, brand services
+7. **SaaS** - Software-as-a-Service, cloud infrastructure, IT services, platforms
+8. **Product** - Product management, design, UX/UI, collaboration tools
+9. **Professional Services** - Consulting, recruitment, staffing, training, advisory
+10. **Sales** - CRM, deal management, revenue systems, sales enablement
+11. **Support** - Customer support platforms, ticketing, support services
+12. **Finance** - Accounting, audit, tax, FP&A, financial planning, ERP
 
 ### Vendor Classification Rules
 ✓ **Method**: Keyword matching from vendor name + decision tree + industry knowledge
@@ -115,33 +115,39 @@ Consistent 12-department taxonomy for all vendor assignments:
 
 ### Vendor Classification Results (Completed ✓)
 - **Total Vendors Classified**: 386 out of 386 (100% success rate)
-- **Classification Method**: Keyword matching + decision tree + industry knowledge
-- **Total Annual Spend Analyzed**: $7,887,360.40
+- **Classification Method**: Keyword matching + decision tree using Config tab departments
+- **Total Annual Spend Analyzed**: $7,886,334.38
+- **Department Source**: Config tab (authoritative)
 
-### Department Distribution (By Vendor Count)
+### Department Distribution (Using Config Tab Departments)
 | Department | Count | % | Annual Spend | % Spend |
 |-----------|-------|----|----|-----|
-| G&A/Operations | 320 | 82.9% | $2,588,480.55 | 32.8% |
+| G&A | 310 | 80.3% | $1,635,192.24 | 20.7% |
 | Sales | 3 | 0.8% | $3,176,426.43 | 40.3% |
-| People/HR | 14 | 3.6% | $232,789.24 | 3.0% |
-| Engineering | 13 | 3.4% | $433,607.99 | 5.5% |
-| Finance | 10 | 2.6% | $650,643.91 | 8.2% |
+| Professional Services | 19 | 4.9% | $456,100.84 | 5.8% |
+| SaaS | 18 | 4.7% | $739,232.54 | 9.4% |
+| Finance | 9 | 2.3% | $649,724.29 | 8.2% |
+| Facilities | 12 | 3.1% | $955,332.92 | 12.1% |
 | Legal | 10 | 2.6% | $105,770.13 | 1.3% |
-| Consulting | 5 | 1.3% | $219,283.53 | 2.8% |
-| IT | 6 | 1.6% | $310,777.60 | 3.9% |
 | Marketing | 3 | 0.8% | $100,705.33 | 1.3% |
 | Product | 2 | 0.5% | $68,875.68 | 0.9% |
+| Engineering | 0 | 0.0% | $0.00 | 0.0% |
+| M&A | 0 | 0.0% | $0.00 | 0.0% |
+| Support | 0 | 0.0% | $0.00 | 0.0% |
 
 ### Key Insights
-- **Spend Concentration**: Top 3 vendors (Salesforce, Navan, BDO) represent significant spend
-- **G&A/Operations Dominance**: 320 vendors (82.9%) classified here - mostly real estate, insurance, travel/expense
-- **Sales Spend Leader**: Despite only 3 vendors (0.8%), Sales category represents 40.3% of total spend (Salesforce-driven)
-- **Conservative Classification**: All descriptions are specific and evidence-based from vendor names
+- **Spend Concentration**: Top 3 vendors (Salesforce, Navan, BDO) represent $4.9M (62% of total)
+- **G&A Dominance**: 310 vendors (80.3%) classified here - real estate, insurance, travel/expense
+- **Sales Spend Leader**: Only 3 vendors but 40.3% of spend (Salesforce $3.18M)
+- **SaaS High Value**: 18 vendors (4.7%) generating 9.4% of spend
+- **Facilities**: 12 vendors (3.1%) generating 12.1% of spend (office real estate)
+- **Conservative Classification**: All descriptions specific and evidence-based
 
-### Classification Script
-- **Location**: `scripts/vendor_classifier.py`
-- **Method**: Keyword matching against vendor names + manual mappings for known vendors
+### Classification Scripts
+- **Location**: `scripts/vendor_classifier_v2.py`, `scripts/vendor_reclassify_config.py`
+- **Method**: Keyword matching against vendor names + specific mappings + Config tab validation
 - **Output**: Department (Column B) and Description (Column D) filled for all 386 vendors
+- **Validation**: All departments verified against Config tab (12 valid departments)
 
 ## Next Steps
 1. ✅ Initialize GitHub repository
